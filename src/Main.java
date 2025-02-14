@@ -32,7 +32,21 @@ public class Main {
                     System.out.println("Resultado = " + resultado);
                     break;
                 case 2:
-                    System.out.println("Conversor");
+                    Scanner scannerConversor = new Scanner(System.in);
+                    System.out.println("Escala atual: ");
+                    String escalaAtual = scannerConversor.next();
+
+                    System.out.println("Valor da temperatura: ");
+                    Double num1 = scannerConversor.nextDouble();
+
+                    System.out.println("Qual escala quer converter ('c' para Celsius 'f' para Fahrenheit 'k' para Kelvin): ");
+                    String escolha = scanner.next();
+
+                    Conversor conversor = new Conversor(escalaAtual, num1, escolha);
+
+                    Double resultado1 = conversor.realizaConversao();
+
+                    System.out.println("Resultado da conversao =" + resultado1);
                     break;
                 case 3:
                     System.out.println("Encerrando programa!");
